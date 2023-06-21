@@ -1,0 +1,130 @@
+.dashboard-table {
+  background: #e6f0f5;
+  height: 100vh;
+  padding: 60px 40px;
+  .table-container {
+    .table__heading {
+      .table__heading--text {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+    .table-section {
+      overflow-x: auto;
+      .table-controls {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        @include largeMobile {
+          display: block;
+        }
+        input[type="text"] {
+          padding: 5px;
+          margin-right: 10px;
+          @include largeMobile {
+            margin-bottom: 15px;
+          }
+        }
+
+        select {
+          padding: 5px;
+        }
+      }
+
+      table {
+        background: #fff;
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+          border: 1px solid #ccc;
+          padding: 8px;
+          .registry-btn {
+            background: rgb(41, 156, 13);
+            color: #fff;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+          }
+        }
+
+        th {
+          background-color: #f0f0f0;
+          font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+          background-color: #eaeaea;
+        }
+      }
+    }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        max-width: 400px;
+        width: 100%;
+        margin: 0 30px;
+        position: relative;
+        h2 {
+          margin-bottom: 10px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .closeBtn {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          font-size: 25px;
+          cursor: pointer;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+
+          label {
+            margin-bottom: 10px;
+
+            input {
+              padding: 5px;
+              width: 100%;
+            }
+          }
+
+          button[type="submit"] {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
